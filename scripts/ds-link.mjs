@@ -19,9 +19,9 @@ const localYalcCmd = path.resolve(
 const YALC_EXEC = fs.existsSync(localYalcCmd) ? `"${localYalcCmd}"` : 'pnpm exec yalc';
 
 const CANONICAL_VERSIONS = {
-  '@timmbr/native-ui': '1.0.0',
+  '@timmbr/native-ui': '1.0.2',
   '@timmbr/theme': '1.3.0',
-  '@timmbr/icons': '1.7.0',
+  '@timmbr/icons': '1.8.0',
   '@timmbr/utils': '1.6.0',
 };
 
