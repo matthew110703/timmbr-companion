@@ -1,0 +1,25 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    "jsxImportSource": "nativewind",
+    "paths": {
+      "@/*": ["./src/*"],
+      "~/*": ["./*"],
+      "@timmbr/native-ui": ["./node_modules/@timmbr/native-ui/src/native/index.tsx"]
+    }
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    ".expo/types/**/*.ts",
+    "expo-env.d.ts",
+    "nativewind-env.d.ts",
+    "src/types/**/*.d.ts"
+  ],
+  "exclude": ["node_modules"]
+}

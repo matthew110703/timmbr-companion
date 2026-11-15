@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-background: 255 255 255;
+    --color-foreground: 11 11 11;
+    --color-card: 255 255 255;
+    --color-card-foreground: 11 11 11;
+    --color-primary: 192 100 58;
+    --color-primary-foreground: 255 255 255;
+    --color-secondary: 245 237 224;
+    --color-secondary-foreground: 96 50 29;
+    --color-muted: 221 213 202;
+    --color-muted-foreground: 109 109 109;
+    --color-accent: 247 241 230;
+    --color-accent-foreground: 96 50 29;
+    --color-destructive: 220 38 38;
+    --color-destructive-foreground: 255 255 255;
+    --color-success: 5 150 105;
+    --color-warning: 217 119 6;
+    --color-info: 37 99 235;
+    --color-border: 231 231 231;
+    --color-ring: 192 100 58;
+  }
+
+  /* `.dark:root` (not bare `.dark`) is what NativeWind treats as app-wide dark-mode variables. */
+  .dark:root {
+    --color-background: 11 11 11;
+    --color-foreground: 247 241 230;
+    --color-card: 35 35 35;
+    --color-card-foreground: 247 241 230;
+    --color-primary: 192 100 58;
+    --color-primary-foreground: 255 255 255;
+    --color-secondary: 60 60 60;
+    --color-secondary-foreground: 245 237 224;
+    --color-muted: 60 60 60;
+    --color-muted-foreground: 157 157 157;
+    --color-accent: 60 60 60;
+    --color-accent-foreground: 245 237 224;
+    --color-destructive: 239 68 68;
+    --color-destructive-foreground: 247 241 230;
+    --color-success: 5 150 105;
+    --color-warning: 217 119 6;
+    --color-info: 37 99 235;
+    --color-border: 60 60 60;
+    --color-ring: 192 100 58;
+  }
+}

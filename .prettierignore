@@ -1,0 +1,11 @@
+android/
+ios/
+dist/
+dist-apk/
+dist-web/
+web-build/
+.expo/
+.yalc/
+coverage/
+pnpm-lock.yaml
+*.md
