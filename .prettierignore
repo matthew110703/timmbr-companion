@@ -9,3 +9,4 @@ web-build/
 coverage/
 pnpm-lock.yaml
 *.md
+google-services.json

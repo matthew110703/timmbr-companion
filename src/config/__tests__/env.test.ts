@@ -124,6 +124,26 @@ describe('Environment Boundary Configuration', () => {
       expect(config.android?.package).toBe('com.timmbr.companion.dev');
       expect(config.ios?.bundleIdentifier).toBe('com.timmbr.companion.dev');
     });
+
+    it('registers a Firebase client for every profile package so each build can receive push', () => {
+      const servicesPath = resolve(__dirname, '../../..', 'google-services.json');
+      const services = JSON.parse(readFileSync(servicesPath, 'utf8')) as {
+        client: { client_info: { android_client_info: { package_name: string } } }[];
+      };
+      const firebasePackages = services.client.map(
+        (c) => c.client_info.android_client_info.package_name,
+      );
+
+      for (const profile of ['development', 'preview', 'production']) {
+        const config = resolveExpoConfig(profile);
+        expect(config.android?.googleServicesFile).toBe('./google-services.json');
+        expect(firebasePackages).toContain(config.android?.package);
+        expect(config.plugins).toContainEqual([
+          'expo-notifications',
+          expect.objectContaining({ defaultChannel: 'orders' }),
+        ]);
+      }
+    });
   });
 
   describe('Zero-Config Dev LAN Resolution', () => {

@@ -43,6 +43,16 @@ export function resolveExpoConfig(envName?: string): ExpoConfig {
 
 EAS Build passes `APP_ENV` through `eas.json` to configure the target bundle.
 
+## Push Notifications (Firebase)
+
+Android push is delivered by Expo Push Service through Firebase Cloud Messaging (Firebase project `timmbr-dev`).
+
+- `google-services.json` at the repo root lists one Firebase Android app per package in the table above. It holds public identifiers only and is committed. Keep it exactly as Firebase downloads it (it is in `.prettierignore`). A test in `env.test.ts` fails if a profile's package has no client in the file, which would otherwise break that profile's Gradle build.
+- The FCM V1 service-account key is a secret. It lives only in EAS credentials (`eas credentials`), uploaded once per application identifier, and never in this repo.
+- The `expo-notifications` plugin uses `assets/images/notification-icon.png` (96×96, white on transparent) and the default channel `orders`, which the backend's push payload targets.
+- iOS remote notifications are disabled (`enableRemoteNotifications: false`) until APNs credentials exist.
+- Push tokens need a development or release build. Expo Go cannot receive remote push on Android.
+
 ## Runtime Validation (`src/config/env.ts`)
 
 Client-accessible variables begin with `EXPO_PUBLIC_`. The app validates all variables using Zod at startup:

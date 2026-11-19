@@ -50,6 +50,7 @@ export function resolveExpoConfig(envName?: string): ExpoConfig {
         backgroundColor: '#0B0B0B',
       },
       package: target.packageName,
+      googleServicesFile: './google-services.json',
     },
     web: {
       bundler: 'metro',
@@ -67,6 +68,16 @@ export function resolveExpoConfig(envName?: string): ExpoConfig {
           image: './assets/images/splash.png',
           resizeMode: 'contain',
           backgroundColor: '#0B0B0B',
+        },
+      ],
+      [
+        'expo-notifications',
+        {
+          icon: './assets/images/notification-icon.png',
+          color: '#C0643A',
+          defaultChannel: 'orders',
+          // iOS push needs APNs credentials (paid Apple Developer account); off until then.
+          enableRemoteNotifications: false,
         },
       ],
       [

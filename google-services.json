@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "859718492572",
+    "project_id": "timmbr-dev",
+    "storage_bucket": "timmbr-dev.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:859718492572:android:0555b9b1277064b670a859",
+        "android_client_info": {
+          "package_name": "com.timmbr.companion"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAboMPchTiVo2sFoxZkk3WXaR3slABqcVw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:859718492572:android:fb498c5c18901a5770a859",
+        "android_client_info": {
+          "package_name": "com.timmbr.companion.dev"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAboMPchTiVo2sFoxZkk3WXaR3slABqcVw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:859718492572:android:4d3b6fcb5c4ecdff70a859",
+        "android_client_info": {
+          "package_name": "com.timmbr.companion.preview"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAboMPchTiVo2sFoxZkk3WXaR3slABqcVw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
